@@ -4,5 +4,3 @@
   },
   "include": ["src"]
 }
-
-/* Estamos adicionando os "absolute imports" na aplicação, para o diretório "src" se tornar a pasta raiz do projeto. */
