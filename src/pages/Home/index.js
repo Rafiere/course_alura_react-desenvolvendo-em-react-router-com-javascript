@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./Home.module.css";
 
 import posts from "json/posts.json";
-import Post from "components/Post";
+import PostCard from "components/PostCard";
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
       {posts.map((post) => {
         return (
           <li key={post.id}>
-            <Post post={post} />
+            <PostCard post={post} />
           </li>
         );
       })}

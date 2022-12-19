@@ -1,5 +1,7 @@
 import Footer from "components/Footer";
 import PaginaPadrao from "components/PaginaPadrao";
+import NotFound from "pages/NotFound";
+import Post from "pages/Post";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Menu from "./components/Menu";
 import AboutMe from "./pages/AboutMe";
@@ -33,10 +35,11 @@ function AppRoutes() {
         <Route path="/" element={<PaginaPadrao />}>
           <Route path="/" element={<Home />} />
           <Route path="/about-me" element={<AboutMe />} />
+          <Route path="/posts/:id" element={<Post />} />
         </Route>
 
         {/* Quando digitarmos uma URL desconhecida para o React Router DOM, ele renderizará o componente de "*". */}
-        <Route path="*" element={<div>Página não encontrada</div>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>
