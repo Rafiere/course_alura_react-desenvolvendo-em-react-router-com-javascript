@@ -2,8 +2,13 @@ import styles from "./NaoEncontrado.module.css";
 import erro404 from "assets/erro_404.png";
 
 import React from "react";
+import BotaoPrincipal from "components/BotaoPrincipal";
+import { useNavigate } from "react-router-dom";
 
 const NotFound = () => {
+  /* Esse hook do React Router DOM permite a navegação pelas rotas da navegação. */
+  const navegar = useNavigate();
+
   return (
     <>
       <div className={styles.conteudoContainer}>
@@ -18,7 +23,9 @@ const NotFound = () => {
           inicial.
         </p>
         <div className={styles.botaoContainer}>
-          <button>Voltar</button>
+          <BotaoPrincipal tamanho={"lg"} onClick={() => navegar("/")}>
+            Voltar
+          </BotaoPrincipal>
         </div>
 
         <img

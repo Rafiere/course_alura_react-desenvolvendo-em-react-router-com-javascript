@@ -35,8 +35,9 @@ function AppRoutes() {
         <Route path="/" element={<PaginaPadrao />}>
           <Route path="/" element={<Home />} />
           <Route path="/about-me" element={<AboutMe />} />
-          <Route path="/posts/:id" element={<Post />} />
         </Route>
+
+        <Route path="/posts/:id" element={<Post />} />
 
         {/* Quando digitarmos uma URL desconhecida para o React Router DOM, ele renderizará o componente de "*". */}
         <Route path="*" element={<NotFound />} />

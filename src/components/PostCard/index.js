@@ -1,3 +1,4 @@
+import BotaoPrincipal from "components/BotaoPrincipal";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -13,7 +14,7 @@ const PostCard = ({ post }) => {
           alt="Imagem de capa do post."
         />
         <h2 className={styles.titulo}>{post.titulo}</h2>
-        <button className={styles.botaoLer}>Ler</button>
+        <BotaoPrincipal>Ler</BotaoPrincipal>
       </div>
     </Link>
   );
